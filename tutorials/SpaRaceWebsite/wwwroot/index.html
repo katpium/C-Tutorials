@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Spa-Francorchamps Race Website</title>
-        <link rel = "stylesheet" href = "style.css">
-    </head>
+<head>
+    <title>Spa Race Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Spa-Francorchamps 2023 Race Visualizer</h1>
 
-    <body>
-        <h1>Spa-Francorchamps 2023 Race</h1>
+    <div id="track-area">
+        <div id="driver-dot"></div>
+    </div>
 
-        <div id = "track-area">
-            <div id = "driver-dot"></div>
-        </div>
+    <button id="play-button">Play</button>
+    <button id="pause-button">Pause</button>
 
-        <button id = "play-button"></button>
-        <button id = "pause-button"></button>
-        <button id = "forward-button"></button>
+    <p id="status">Waiting...</p>
 
-        <p>Waiting...</p>
-
-        <script = "app.js"></script>
-    </body>
+    <script src="app.js"></script>
+</body>
 </html>

@@ -4,6 +4,9 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapGet("/api/location", async () =>
 {
     HttpClient client = new HttpClient();
@@ -19,7 +22,12 @@ app.MapGet("/api/location", async () =>
         return Results.NotFound("No location data found.");
     }
 
-    return Results.Ok(locations.Take(100));
+    var usableLocations = locations
+    .Where(point => point.X != 0 || point.Y != 0)
+    .Take(100)
+    .ToList();
+
+    return Results.Ok(usableLocations);
 });
 
 Console.WriteLine ("=== Spa-Francorchamps 2023 Race ===");
