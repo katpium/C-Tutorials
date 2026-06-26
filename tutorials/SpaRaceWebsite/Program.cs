@@ -24,7 +24,7 @@ app.MapGet("/api/location", async () =>
 
     var usableLocations = locations
     .Where(point => point.X != 0 || point.Y != 0)
-    .Take(100)
+    .Take(2000)
     .ToList();
 
     return Results.Ok(usableLocations);

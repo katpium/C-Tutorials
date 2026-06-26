@@ -79,6 +79,24 @@ function scalePoint(point) {
     let screenX = ((point.y - minY) / (maxY - minY)) * usableWidth + padding;
     let screenY = ((point.x - minX) / (maxX - minX)) * usableHeight + padding;
 
+    // Keep this if left/right direction is already correct
+    screenX = trackWidth - screenX;
+
+    // Add this to flip upside down
+    screenY = trackHeight - screenY;
+
+    // Manual map alignment controls
+    const scale = 0.93;
+
+    //Move path left/right
+    const offsetX = 0;
+
+    //Move it up/down
+    const offsetY = 10;
+
+    screenX = trackWidth / 2 + (screenX - trackWidth / 2) * scale + offsetX;
+    screenY = trackHeight / 2 + (screenY - trackHeight / 2) * scale + offsetY;
+
     return {
         x: screenX,
         y: screenY
@@ -114,7 +132,7 @@ playButton.addEventListener("click", () => { // when click do this !
     }
 
     //if it hasnt run, run for every 200 MILISECONDS
-    intervalId = setInterval(moveDot, 200);
+    intervalId = setInterval(moveDot, 100);
 })
 
 pauseButton.addEventListener("click", () => {

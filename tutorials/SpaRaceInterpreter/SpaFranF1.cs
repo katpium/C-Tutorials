@@ -57,10 +57,11 @@ foreach (SessionResult result in sortedResults)
     //If the driver is null, say "Unknown Driver" is not null, show name
     string driverName = driver == null ? "Unknown Driver" : driver.FullName;
 
+    int driverNumber = driver == null ? 0 : driver.DriverNumber;
     //If the driver is null -> "Unknown Team"
     string teamName = driver == null ? "Unknown Team" : driver.TeamName;
 
-    Console.WriteLine($"{result.Position}. {driverName} - {teamName}");
+    Console.WriteLine($"{result.Position}. {driverName} - {driverNumber} - {teamName}");
 }
 
 Console.WriteLine();
