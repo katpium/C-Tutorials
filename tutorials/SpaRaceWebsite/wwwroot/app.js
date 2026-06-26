@@ -86,13 +86,13 @@ function scalePoint(point) {
     screenY = trackHeight - screenY;
 
     // Manual map alignment controls
-    const scale = 0.93;
+    const scale = 0.96;
 
     //Move path left/right
-    const offsetX = 0;
+    const offsetX = 10;
 
     //Move it up/down
-    const offsetY = 10;
+    const offsetY = 13;
 
     screenX = trackWidth / 2 + (screenX - trackWidth / 2) * scale + offsetX;
     screenY = trackHeight / 2 + (screenY - trackHeight / 2) * scale + offsetY;

@@ -19,8 +19,8 @@ body {
 }
 
 #driver-dot {
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     background-image: url("assets/max-dot.png");
     background-size: contain;
     background-repeat: no-repeat;
