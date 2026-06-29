@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Meal Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+
+        <!-- Bottom-left food picture -->
+        <section class="meal-image-box">
+            <img id="meal-image" src="" alt="Meal image">
+        </section>
+
+        <!-- Right-side recipe paper -->
+        <section class="recipe-area">
+            <h2 id="meal-name">Click the spoon for a new recipe!</h2>
+
+            <p id="meal-category"></p>
+            <p id="meal-cuisine"></p>
+
+            <h3>Ingredients</h3>
+            <ul id="meal-ingredients"></ul>
+
+            <h3>Instructions</h3>
+            <p id="meal-instructions">
+                Your recipe instructions will appear here.
+            </p>
+        </section>
+
+        <button id="spoon-button" aria-label="Generate new recipe">
+            🥄
+        </button>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

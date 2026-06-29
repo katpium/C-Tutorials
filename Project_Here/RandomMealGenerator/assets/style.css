@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #3a2418;
+}
+
+.page {
+    width: 1366px;
+    height: 768px;
+    margin: 0 auto;
+    position: relative;
+
+    background-image: url("background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Bottom-left food picture box */
+.meal-image-box {
+    position: absolute;
+    left: 118px;
+    top: 460px;
+    width: 320px;
+    height: 245px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+#meal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+/* Right paper area */
+.recipe-area {
+    position: absolute;
+    left: 600px;
+    top: 55px;
+    width: 650px;
+    height: 610px;
+
+    color: #5a2d1b;
+    font-size: 18px;
+    line-height: 1.35;
+
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+#meal-name {
+    color: #8b0000;
+    font-size: 34px;
+    margin: 0 0 10px 0;
+    font-style: italic;
+}
+
+#meal-category,
+#meal-cuisine {
+    color: #8b0000;
+    font-size: 20px;
+    margin: 4px 0;
+}
+
+.recipe-area h3 {
+    color: #8b0000;
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
+
+#meal-ingredients {
+    margin-top: 5px;
+    padding-left: 25px;
+}
+
+#meal-instructions {
+    font-size: 17px;
+    color: #4b2e1f;
+}
+
+#spoon-button {
+    position: absolute;
+    right: 0px;
+    bottom: 25px;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    font-size: 90px;
+    line-height: 1;
+
+    transform: rotate(70deg);
+    transition: transform 0.2s ease;
+}
+
+/* Hover: spoon jumps up a little */
+#spoon-button:hover {
+    transform: rotate(35deg) translateY(-12px);
+}
